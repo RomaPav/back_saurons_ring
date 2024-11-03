@@ -23,6 +23,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+@app.get("/")
+async def read_root():
+    return {"message": "Welcome to my API!"}
+
+
 app.include_router(user_api, prefix="/users")
 app.include_router(coin_api, prefix="/coin")
 app.include_router(order_api, prefix="/order")
