@@ -12,7 +12,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:4200",
-    "https://myfrontenddomain.com",
+    "https://front-saurons-ring.onrender.com",
 ]
 
 app.add_middleware(
